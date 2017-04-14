@@ -1,3 +1,7 @@
+<?php 
+notify_added();
+notify_updated();
+?>
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
@@ -10,8 +14,6 @@
             </div>
 
             <div class="clearfix"></div>
-
-           <?php if(isset($_SESSION['success'])){ echo "<div class='alert alert-success'>".$_SESSION['success']."</div>"; }?>
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
@@ -45,6 +47,31 @@
                       </div>
                     </form>
 
+
+                    <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Site Title</th>
+                          <th>Page Title</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php  $i = 1; foreach ($result as $row): ?>
+                          <tr>
+                          <td><?php echo $i++?></td>
+                          <td><?php echo $row->site_title?></td>
+                          <td><?php echo $row->page_title?></td>
+                          <td>
+                            <a href="#" onClick="show_confirm('edit',<?php echo $row->id;?>)" class="btn btn-dark">Edit</a>
+                            <a href="#" onClick="show_confirm('delete',<?php echo $row->id;?>)" class="btn btn-danger">Delete</a>
+                          </td>
+                          </tr>
+                        <?php endforeach ?>
+                        
+                      </tbody>
+                    </table>
                     <!-- End -->
 
                   </div>
@@ -54,3 +81,5 @@
           </div>
         </div>
         <!-- /page content -->
+
+

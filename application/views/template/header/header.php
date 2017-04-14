@@ -1,3 +1,4 @@
+<?php include 'notification-system.php' ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,13 +21,22 @@
     <link href="<?php echo base_url()?>assets/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
     <!-- Select2 -->
     <link href="<?php echo base_url()?>assets/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <link href="<?php echo base_url()?>assets/sweetalert/dist/sweetalert.css" rel="stylesheet">
+    <!-- sweet alert -->
+    <script src="<?php echo base_url()?>assets/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Switchery -->
     <link href="<?php echo base_url()?>assets/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
     <!-- starrr -->
     <link href="<?php echo base_url()?>assets/vendors/starrr/dist/starrr.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
     <link href="<?php echo base_url()?>assets/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
+    <!-- Data Tables -->
+    <link href="<?php echo base_url()?>assets/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>assets/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>assets/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>assets/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>assets/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="<?php echo base_url()?>assets/build/css/custom.min.css" rel="stylesheet">
 
